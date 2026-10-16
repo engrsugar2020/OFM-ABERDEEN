@@ -1,4 +1,4 @@
-/* Omega Fire Ministries Aberdeen — site scripts */
+/* Omega Fire Ministries Aberdeen site scripts */
 (function () {
   "use strict";
 
@@ -98,7 +98,7 @@
     });
   });
 
-  /* Contact form — opens the visitor's email app */
+  /* Contact form: opens the visitor's email app */
   var form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -107,7 +107,7 @@
       var from = form.email.value.trim();
       var msg = form.message.value.trim();
       var subject = "Message or prayer request from " + (name || "a visitor");
-      var body = msg + "\n\n— " + (name || "") + (from ? "\n" + from : "");
+      var body = msg + "\n\n" + (name || "") + (from ? "\n" + from : "");
       window.location.href = "mailto:" + CHURCH.email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   }
