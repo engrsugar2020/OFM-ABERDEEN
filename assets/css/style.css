@@ -398,3 +398,11 @@ textarea.field { min-height: 110px; resize: vertical; }
 .socials a { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; border: 1px solid rgba(226,179,64,.45); color: var(--gold); font-size: 17px; transition: background .2s, color .2s; }
 .socials a:hover { background: var(--gold); color: var(--navy-ink); }
 .site-footer .socials a:hover { color: var(--navy-ink); }
+
+/* Slideshow: show whole photo over a soft blurred copy so portrait shots are not cropped */
+.carousel-viewport { aspect-ratio: 4 / 3; }
+.slide { overflow: hidden; background: #0b1640; }
+.slide-bg { position: absolute; inset: -30px; background-size: cover; background-position: center; filter: blur(28px) brightness(.55); transform: scale(1.1); }
+.slide img { position: relative; object-fit: contain; }
+.slide-caption { z-index: 2; }
+@media (max-width: 600px) { .carousel-viewport { aspect-ratio: 4 / 5; } }
