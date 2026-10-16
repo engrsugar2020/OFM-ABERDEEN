@@ -406,3 +406,6 @@ textarea.field { min-height: 110px; resize: vertical; }
 .slide img { position: relative; object-fit: contain; }
 .slide-caption { z-index: 2; }
 @media (max-width: 600px) { .carousel-viewport { aspect-ratio: 4 / 5; } }
+
+/* Leader photos: gentle corners so no heads are trimmed */
+.leader img { border-radius: 14px; object-position: center top; }
