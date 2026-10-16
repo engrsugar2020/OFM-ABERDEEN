@@ -409,3 +409,14 @@ textarea.field { min-height: 110px; resize: vertical; }
 
 /* Leader photos: gentle corners so no heads are trimmed */
 .leader img { border-radius: 14px; object-position: center top; }
+
+/* Slides are pre-cropped to 4:3 around faces: fill the frame */
+.carousel-viewport { aspect-ratio: 4 / 3 !important; }
+.slide img { object-fit: cover !important; }
+.slide-bg { display: none; }
+@media (max-width: 600px) {
+  .slide-caption { padding: 34px 14px 10px; }
+  .slide-caption h3 { font-size: 17px; }
+  .slide-caption p { font-size: 12px; }
+  .carousel-btn { width: 34px; height: 34px; font-size: 17px; }
+}
